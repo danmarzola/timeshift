@@ -38,7 +38,7 @@ using TeeJee.Misc;
 public Main App;
 public const string AppName = "Timeshift";
 public const string AppShortName = "timeshift";
-public const string AppVersion = "19.08";
+public const string AppVersion = "20.03";
 public const string AppAuthor = "Tony George";
 public const string AppAuthorEmail = "teejeetech@gmail.com";
 
@@ -603,6 +603,8 @@ public class AppConsole : GLib.Object {
 	// restore
 	
 	private bool restore_snapshot(){
+
+		App.include_btrfs_home_for_restore = true;
 
 		select_snapshot_device(true);
 
